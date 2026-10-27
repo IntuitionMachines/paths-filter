@@ -2,7 +2,7 @@
   "name": "paths-filter",
   "version": "1.0.0",
   "engines": {
-    "node": ">= 20"
+    "node": ">= 24"
   },
   "private": true,
   "description": "Execute your workflow steps only if relevant files are modified.",
@@ -14,7 +14,7 @@
     "lint": "eslint src/**/*.ts",
     "pack": "ncc build",
     "test": "jest",
-    "all": "npm run build && npm run format && npm run lint && npm run pack && npm test"
+    "all": "pnpm run build && pnpm run format-check && pnpm run lint && pnpm run pack && pnpm test"
   },
   "repository": {
     "type": "git",
@@ -31,15 +31,15 @@
     "@actions/core": "^1.10.0",
     "@actions/exec": "^1.1.1",
     "@actions/github": "6.0.0",
-    "picomatch": "^2.3.1"
+    "picomatch": "^4.0.7"
   },
   "devDependencies": {
     "@octokit/types": "^15.0.0",
     "@octokit/webhooks-types": "^7.3.1",
     "@types/jest": "^29.5.11",
     "@types/js-yaml": "^4.0.9",
-    "@types/node": "^20.11.6",
-    "@types/picomatch": "^2.3.3",
+    "@types/node": "^24.0.0",
+    "@types/picomatch": "^4.0.3",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
     "@vercel/ncc": "^0.38.1",
@@ -52,5 +52,6 @@
     "prettier": "^2.8.8",
     "ts-jest": "^29.1.2",
     "typescript": "^5.3.3"
-  }
+  },
+  "packageManager": "pnpm@10.28.1"
 }
